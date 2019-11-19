@@ -1,0 +1,1 @@
+def rotarion(std, dragon):

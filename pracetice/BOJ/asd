@@ -1,0 +1,16 @@
+for t in range(10):
+    c = int(input())
+    n = [int(x) for x in input().split()]
+
+    while c:
+        m = n.index(max(n))
+        x = n.index(min(n))
+        if n[m] - n[x] <= 1:
+            break
+        n[m] -= 1
+        n[x] += 1
+        c -= 1
+
+    m = n.index(max(n))
+    x = n.index(min(n))
+    print('#{} {}'.format(t+1, n[m] - n[x]))
